@@ -26,7 +26,7 @@ all:
 	if [[ ! -d "$$(basename $< .md)" ]]; then mkdir "$$(basename $< .md)"; fi
 	$(BUILDER) \
           -D $(OG_TITLE) \
-          -K "$$(cat $<.dat)" \
+          -K "$$(cat dat/$$(basename $< .md).dat)" \
           --og-title $(OG_TITLE) \
           --og-type $(OG_TYPE) \
           --og-url "https://ebzzry.io/en/$$(basename $< .md)/" \
