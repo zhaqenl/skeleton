@@ -11,12 +11,10 @@ ANALYTICS="12345678-9"
 %.html: src/%.md
 	$(BUILDER) \
           -D $(OG_TITLE) \
-          -K "Some random person" \
           --og-title $(OG_TITLE) \
           --og-type $(OG_TYPE) \
           --og-url "https://username.github.io/$$(basename $< .md).html" \
           --og-image $(OG_IMAGE) \
-          --analytics $(ANALYTICS) \
           -RFiamuo "$$(basename $< .md).html" \
           $<
 
