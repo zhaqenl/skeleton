@@ -11,8 +11,6 @@ ANALYTICS="12345678-9"
 all:
 	parallel --will-cite "$(MAKE) {/.}.html" ::: $(FILES)
 	$(BUILDER) \
-          -D "A website about foo, bar, and baz." \
-          --og-title "Foo, Bar, and Baz." \
           --og-type $(OG_TYPE) \
           --og-url "https://username.github.io/en/" \
           --og-image $(OG_IMAGE) \
